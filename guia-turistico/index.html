@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Guia Turistico de Juiz de Fora</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: #f8fafc;
+    color: #334155;
+    line-height: 1.7;
+}
+header {
+    background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+    color: white;
+    padding: 50px 20px 70px;
+    text-align: center;
+}
+header h1 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+header > p {
+    max-width: 700px;
+    margin: 0 auto 10px;
+    font-size: 17px;
+    opacity: 0.95;
+}
+header img {
+    border-radius: 16px;
+    margin: 25px 0 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 4px solid white;
+    max-width: 100%;
+}
+header figure figcaption {
+    font-size: 13px;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+nav {
+    background: white;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 15px;
+    margin: -30px auto 0;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 10;
+}
+nav a {
+    text-decoration: none;
+    color: #0f766e;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: #f0fdfa;
+    transition: 0.3s;
+}
+nav a:hover {
+    background: #0f766e;
+    color: white;
+    transform: translateY(-2px);
+}
+section {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 16px;
+    padding: 35px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+section > img {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 12px;
+    float: left;
+    margin: 0 25px 15px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+section figcaption {
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+section h2 {
+    color: #0f766e;
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-left: 5px solid #14b8a6;
+    padding-left: 15px;
+}
+section h3 {
+    color: #1e293b;
+    margin: 25px 0 10px;
+    font-size: 18px;
+}
+#Gastronomia ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+#Gastronomia li {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    transition: 0.3s;
+}
+#Gastronomia li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+#Gastronomia li p {
+    font-size: 14px;
+    margin-top: 8px;
+    color: #475569;
+}
+aside {
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+}
+aside h2 { color: #92400e; margin-bottom: 10px; font-size: 22px; }
+aside a {
+    display: inline-block;
+    margin-top: 12px;
+    background: #f59e0b;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+aside a:hover { background: #d97706; }
+.footer-imoveis {
+    background: #111827;
+    color: #d1d5db;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.footer-left h3 { color: #fff; margin: 0 0 5px 0; font-size: 18px; }
+.footer-left span { color: #14b8a6; font-size: 13px; font-weight: 600; text-transform: uppercase; }
+.footer-left p { margin: 15px 0 0 0; font-size: 13px; line-height: 1.6; color: #9ca3af; }
+.footer-left b { color: #fff; }
+.footer-right { text-align: right; }
+.footer-right p { margin: 0 0 15px 0; font-size: 13px; }
+.btn-topo {
+    display: inline-block;
+    background: #14b8a6;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    transition: 0.3s;
+}
+.btn-topo:hover { background: #fff; color: #111827; transform: translateY(-2px); }
+@media(max-width: 768px){
+    header h1 { font-size: 30px; }
+    section > img { float: none; margin: 0 0 15px 0; max-width: 100%; }
+    section { padding: 20px; margin: 20px 15px; }
+    nav { margin: 20px 15px 0; }
+    .footer-container { flex-direction: column; text-align: center; }
+    .footer-right { text-align: center; }
+}
+
+
+</style>
+</head>
+<body >
+    <header>
+    <!-- -->
+        <h1>Conheça Juiz de Fora</h1>
+        <p>O guia turistico da prefeitura de Juiz de Fora está aqui para te auxiliar, ele pode te orientar sobre as principais atrações da cidade.</p>
+        <p>Venha conhecer a capital do <b>torresmo</b></p>
+        <img src="imagens/rocambole-de-torresmo.avif" alt="comida tipica da região, rocambole de torresmo" width="400">
+        <br>
+        <br>
+
+        <nav>
+            <a href="#Historias">Histórias da cidade</a>
+            <a href="#Atrações">Principais Atrações</a>
+            <a href="#Dicas">Dicas para Visitantes</a>
+            <a href="#Gastronomia">Gastronomia</a>
+        </nav>
+    </header>
+
+    <section id="Historias">
+        <img src="imagens/foto-da-cidade.jpg" alt="foto panoramica da cidade de juiz de fora">
+        <figure><figcaption>Foto panorâmica da cidade de Juiz de Fora.</figcaption></figure>
+        <h2>Histórias da cidade</h2>
+        <article>
+            <h3>1. A Origem: O Caminho Novo e o Nome da Cidade</h3>
+            <p>A trajetória de Juiz de Fora começou no início do século XVIII com a abertura do Caminho Novo da Estrada Real (1703)... A região ficou conhecida como a Sesmaria do Juiz de Fora. O povoado original chamava-se Santo Antônio do Morro da Boiada do Paraibuna.</p>
+            <h3>2. O Ciclo do Café e a Estrada União e Indústria</h3>
+            <p>No século XIX, Juiz de Fora tornou-se uma das maiores produtoras de café do estado... Mariano Procópio inaugurou, em 1861, a Estrada União e Indústria. Essa foi a primeira rodovia macadamizada da América do Sul.</p>
+        </article>
+    </section>
+
+    <section id="Atrações">
+        <img src="imagens/parque.jpg" alt="foto do parque da lajinha">
+        <figure><figcaption>Foto do Parque da Lajinha.</figcaption></figure>
+        <h2>Principais Atrações</h2>
+        <article>
+            <h3>1. Museu Mariano Procópio</h3>
+            <p>Fundado em 1915, o museu abriga uma vasta coleção de arte e história, incluindo obras de artistas renomados.</p>
+            <h3>2. Parque da Lajinha</h3>
+            <p>Espaço verde ideal para caminhadas, piqueniques e atividades ao ar livre. Um refúgio para quem busca contato com a natureza.</p>
+            <h3>3. Catedral Metropolitana</h3>
+            <p>Marco arquitetônico da cidade, conhecida por sua imponência e beleza.</p>
+        </article>
+    </section>
+
+    <section id="Dicas">
+        <img src="imagens/hotel.jpg" alt="foto de um hotel de juiz de fora Premier parc hotel">
+        <figure><figcaption>Hotel Premier Parc, em Juiz de Fora.</figcaption></figure>
+        <h2>Dicas para Visitantes</h2>
+        <article>
+            <h3>1. Transporte Público</h3>
+            <p>Juiz de Fora possui um sistema de transporte público eficiente, incluindo ônibus e táxis.</p>
+            <h3>2. Gastronomia Local</h3>
+            <p>Experimente a culinária local para uma experiência completa, como o famoso rocambole de torresmo.</p>
+            <h3>3. Hospedagem</h3>
+            <p>Diversas opções de hospedagem, desde hotéis de luxo até pousadas aconchegantes. Reserve com antecedência.</p>
+        </article>
+    </section>
+
+    <section id="Gastronomia">
+        <img src="imagens/rocambole-de-torresmo.avif" alt="comida tipica da região, rocambole de torresmo">
+        <figure><figcaption>Rocambole de Torresmo, prato típico da região.</figcaption></figure>
+        <h2>Gastronomia</h2>
+        <article>
+            <ul>
+                <li><b>Rocambole de Torresmo</b><p>Feito com carne suína e temperos especiais. É uma iguaria que representa a culinária local.</p></li>
+                <li><b>Feijoada Mineira</b><p>Preparada com feijão preto, carnes variadas e acompanhamentos típicos.</p></li>
+                <li><b>Doces Regionais</b><p>Não deixe de provar o doce de leite e as compotas feitas com frutas locais.</p></li>
+            </ul>
+        </article>
+    </section>
+
+    <aside>
+        <h2>Informações Úteis</h2>
+        <p>Para mais informações, visite o site oficial da prefeitura ou entre em contato com o centro de informações turísticas.</p>
+        <a href="https://www.pjf.mg.gov.br/turismo/guia_de_atrativos_turisticos/index.php" target="_blank">Acessar Site Oficial da Prefeitura</a>
+    </aside>
+
+    <footer class="footer-imoveis">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>Portal Guia Turístico</h3>
+                <span>Juiz de Fora • MG</span>
+                <p>© 2026 Portal Guia Turistico - Juiz de Fora •<br>
+                Projeto Acadêmico SENAI MG<br>
+                Desenvolvido por <b>Yago Xaavier Do Carmo Barbosa</b> — Curso Técnico em Informática para Internet.</p>
+            </div>
+            <div class="footer-right">
+                <p>Guia Oficial de Turismo</p>
+                <a href="#" class="btn-topo">↑ Voltar ao topo</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
